@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
 import '../globals.css';
-import { golosText } from '@/shared/config/fonts';
+import { rubikText } from '@/shared/config/fonts';
 import { ThemeProvider } from '@/shared/config/theme-provider';
 import { PRODUCT_INFO } from '@/shared/constants/data';
 import { hasLocale, Locale, NextIntlClientProvider } from 'next-intl';
 import { routing } from '@/shared/config/i18n/routing';
 import { notFound } from 'next/navigation';
-import Footer from '@/widgets/footer/ui';
 import Navbar from '@/widgets/navbar/ui';
 import { ReactNode } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import QueryProvider from '@/shared/config/react-query/QueryProvider';
 import Script from 'next/script';
+import Sidebar from '@/widgets/sidebar/ui';
+import Breadcrump from '@/widgets/breadcrump/ui';
 
 export const metadata: Metadata = {
   title: PRODUCT_INFO.name,
@@ -39,7 +40,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${golosText.variable} antialiased`}>
+      <body className={`${rubikText.className} antialiased`}>
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider
             attribute={'class'}
@@ -49,8 +50,13 @@ export default async function RootLayout({ children, params }: Props) {
           >
             <QueryProvider>
               <Navbar />
-              {children}
-              <Footer />
+              <div className="mt-[60px] flex justify-between items-start">
+                <Sidebar />
+                <div className="flex-1 p-[20px] min-h-[calc(100vh-60px)] max-w-[1600px] mx-auto max-h-[calc(100vh-60px)] overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-neutral-400">
+                  <Breadcrump />
+                  <div className="py-1">{children}</div>
+                </div>
+              </div>
             </QueryProvider>
           </ThemeProvider>
         </NextIntlClientProvider>

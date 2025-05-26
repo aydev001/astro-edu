@@ -1,0 +1,38 @@
+export const statCardData = [
+  {
+    title: 'Jami soatlar',
+    subtitle: 'Fan 4 kredit',
+    value: 120,
+    progress: 78,
+    progressLabel: "O'tilgan soatlar foizi",
+    gradientFrom: '#491872',
+    gradientTo: '#401897',
+  },
+  {
+    title: "Ma'ruzalar",
+    subtitle: 'Fan 6 kredit',
+    value: 30,
+    progress: 88,
+    progressLabel: "O'tilgan soatlar foizi",
+    gradientFrom: '#818cf8',
+    gradientTo: '#8342f6',
+  },
+  {
+    title: 'Amaliyotlar',
+    subtitle: 'Fan 6 kredit',
+    value: 18,
+    progress: 65,
+    progressLabel: "O'tilgan soatlar foizi",
+    gradientFrom: '#fb7185',
+    gradientTo: '#e81f56',
+  },
+  {
+    title: 'Mustaqil ish',
+    subtitle: 'Fan 6 kredit',
+    value: 72,
+    progress: 90,
+    progressLabel: 'Bajarilgan topshiriqlar',
+    gradientFrom: '#60a5fa',
+    gradientTo: '#0945ea',
+  },
+];

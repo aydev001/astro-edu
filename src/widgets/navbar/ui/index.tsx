@@ -1,122 +1,72 @@
-import { Accordion } from '@/shared/ui/accordion';
-import { Button } from '@/shared/ui/button';
-import {
-  NavigationMenu,
-  NavigationMenuList,
-} from '@/shared/ui/navigation-menu';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/shared/ui/sheet';
-import { Menu } from 'lucide-react';
-import { menu } from '../lib/data';
+'use client';
 import { PRODUCT_INFO } from '@/shared/constants/data';
-import RenderMenuItem from './RenderItem';
-import RenderMobileMenuItem from './RenderMobileMenuItem';
-import { ChangeLang } from './ChangeLang';
-import Link from 'next/link';
+import useSidebarStore from '@/shared/store/sidebarSore';
+import { Bell, LayoutDashboard, Menu, Search, User, X } from 'lucide-react';
+import React from 'react';
 
 const Navbar = () => {
-  const auth = {
-    login: { title: 'Login', url: '#' },
-    signup: { title: 'Sign up', url: '#' },
-  };
-
+  const { isOpen, toggleSidebar } = useSidebarStore();
   return (
-    <section className="py-4">
-      <div className="custom-container">
-        {/* Desktop Menu */}
-        <nav className="hidden justify-between lg:flex">
-          <div className="flex items-center gap-6">
-            {/* Logo */}
-            <Link href={'/'} className="flex items-center gap-2">
-              <img
-                src={PRODUCT_INFO.logo}
-                className="max-h-8"
-                alt={PRODUCT_INFO.name}
-              />
-              <span className="text-lg font-semibold tracking-tighter">
-                {PRODUCT_INFO.name}
-              </span>
-            </Link>
-            <div className="flex items-center">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {menu.map((item) => RenderMenuItem(item))}
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <ChangeLang />
-            <Button asChild variant="outline">
-              <Link href={auth.login.url}>{auth.login.title}</Link>
-            </Button>
-            <Button asChild>
-              <Link href={auth.signup.url}>{auth.signup.title}</Link>
-            </Button>
-          </div>
-        </nav>
+    <header className="fixed z-[99] w-full h-[60px] font-normal left-0 top-0 bg-[linear-gradient(45deg,#4d77ff_0%,#0186f2_100%)]">
+      <div className="flex justify-between items-center gap-[10px]">
+        <div className="flex justify-start items-center gap-1">
+          <button
+            onClick={() => toggleSidebar()}
+            className="text-white hover:bg-white/15 w-[60px] h-[60px] bg-white/10 flex justify-center items-center cursor-pointer active:bg-white/20 duration-100 relative"
+          >
+            <Menu
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  duration-300 ease-in-out transform ${
+                isOpen
+                  ? 'opacity-100 scale-100'
+                  : 'opacity-0 scale-0 pointer-events-none'
+              }`}
+              size={24}
+            />
+            <X
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  duration-300 ease-in-out transform ${
+                isOpen
+                  ? 'opacity-0 scale-0 pointer-events-none'
+                  : 'opacity-100 scale-100'
+              }`}
+              size={24}
+            />
+          </button>
 
-        {/* Mobile Menu */}
-        <div className="block lg:hidden">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href={'/'} className="flex items-center gap-2">
-              <img
-                src={PRODUCT_INFO.logo}
-                className="max-h-8"
-                alt={PRODUCT_INFO.name}
-              />
-            </Link>
-            <Sheet>
-              <div className="space-x-2">
-                <ChangeLang />
-                <SheetTrigger asChild>
-                  <Button variant="outline" size="icon">
-                    <Menu className="size-4" />
-                  </Button>
-                </SheetTrigger>
-              </div>
-              <SheetContent className="overflow-y-auto">
-                <SheetHeader>
-                  <SheetTitle>
-                    <Link href={'/'} className="flex items-center gap-2">
-                      <img
-                        src={PRODUCT_INFO.logo}
-                        className="max-h-8"
-                        alt={PRODUCT_INFO.name}
-                      />
-                    </Link>
-                  </SheetTitle>
-                </SheetHeader>
-                <div className="flex flex-col gap-6 p-4">
-                  <Accordion
-                    type="single"
-                    collapsible
-                    className="flex w-full flex-col gap-4"
-                  >
-                    {menu.map((item) => RenderMobileMenuItem(item))}
-                  </Accordion>
-
-                  <div className="flex flex-col gap-3">
-                    <Button asChild variant="outline">
-                      <Link href={auth.login.url}>{auth.login.title}</Link>
-                    </Button>
-                    <Button asChild>
-                      <Link href={auth.signup.url}>{auth.signup.title}</Link>
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+          <div className="px-[10px]">
+            <img
+              className="max-h-[42px] block md:hidden"
+              src={PRODUCT_INFO.logoMobile}
+              alt={PRODUCT_INFO.name}
+            />
+            <img
+              className="max-h-[42px] hidden md:block"
+              src={PRODUCT_INFO.logoWhite}
+              alt={PRODUCT_INFO.name}
+            />
           </div>
+          <ul
+            className={`flex justify-start max-md:hidden items-center gap-[15px] font-[800] text-[14px] uppercase text-white`}
+          >
+            <li className="cursor-pointer">HOME</li>
+            <li className="cursor-pointer">Quick menu</li>
+          </ul>
+        </div>
+        <div className="flex justify-end items-center">
+          <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
+            <Search size={'20px'} />
+          </button>
+          <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
+            <Bell size={'20px'} className="fill-amber-50" />
+          </button>
+          <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
+            <User size={'20px'} />
+          </button>
+          <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
+            <LayoutDashboard size={'20px'} className="fill-amber-50" />
+          </button>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

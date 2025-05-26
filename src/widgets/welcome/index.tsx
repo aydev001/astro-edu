@@ -1,30 +1,38 @@
-'use client';
-
-import { getPosts } from '@/shared/config/api/testApi';
-import { useQuery } from '@tanstack/react-query';
-import Link from 'next/link';
+import { partners } from '@/widgets/partner-card/lib/data';
+import PartnerCard from '@/widgets/partner-card/ui';
+import { statCardData } from '@/widgets/stat-card/lib/data';
+import StatCard from '@/widgets/stat-card/ui';
+import { tasks } from '@/widgets/task-card/lib/data';
+import TaskCard from '@/widgets/task-card/ui';
 import React from 'react';
 
 const Welcome = () => {
-  const { data } = useQuery({
-    queryKey: ['posts'],
-    queryFn: () => getPosts({ _limit: 1 }),
-  });
-
-  console.log('CSR posts', data);
-
   return (
-    <div className="custom-container h-full bg-accent min-h-[400px] rounded-2xl flex items-center justify-center">
-      <Link
-        className="github-button"
-        href="https://github.com/fiasuz/create-fias"
-        data-color-scheme="no-preference: light; light: light; dark: dark;"
-        data-icon="octicon-star"
-        data-size="large"
-        aria-label="Star fiasuz/create-fias on GitHub"
-      >
-        Star on github
-      </Link>
+    <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-[10px]">
+        {statCardData.map((data, idx) => (
+          <StatCard key={idx} {...data} />
+        ))}
+      </div>
+      <div className="flex max-lg:flex-col py-[15px] gap-[10px]">
+        <section className="p-[15px] pb-0 border rounded-md shadow-sm">
+          <h2 className="text-xl font-semibold mb-2">Fan topshiriqlari</h2>
+          <div className="grid grid-cols-1">
+            {tasks.map((task, index) => (
+              <TaskCard key={index} {...task} />
+            ))}
+          </div>
+        </section>
+
+        <section className="p-[15px] pb-0 border rounded-md shadow-sm flex-1">
+          <h2 className="text-xl font-semibold mb-2">Hamkor tashkilotlar</h2>
+          <div className="flex lg:flex-col justify-center lg:items-center">
+            {partners.map((partner, index) => (
+              <PartnerCard key={index} {...partner} />
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
