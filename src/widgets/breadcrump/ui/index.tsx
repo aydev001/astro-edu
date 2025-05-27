@@ -1,11 +1,8 @@
 'use client';
 import { House } from 'lucide-react';
-import { useParams } from 'next/navigation';
 import React from 'react';
 
 const Breadcrump = () => {
-  const params = useParams();
-  console.log(params);
   return (
     <div className="flex justify-start items-center gap-2 border-b pb-[6px]">
       <div className="text-[20px]">Bosh sahifa</div>

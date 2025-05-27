@@ -5,6 +5,10 @@ const PRODUCT_INFO = {
   logoMobile: '/logo-mobile.png',
   logoAside: '/logo-aside.png',
   favicon: '/favicon.png',
+  taskCard: '/task-card-image.jpg',
+  hamkor1: '/hamkor1.png',
+  hamkor2: '/hamkor2.jpg',
+  hamkor3: '/hamkor3.svg',
   url: 'https://www.shadcnblocks.com',
   socials: {
     telegram: 'https://t.me/usmanov_dev',

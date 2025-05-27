@@ -1,16 +1,18 @@
+import { PRODUCT_INFO } from '@/shared/constants/data';
+
 export const partners = [
   {
-    logoUrl: 'https://edu-champ-seven.vercel.app/images/hamkor3.png',
+    logoUrl: PRODUCT_INFO.hamkor1,
     title: 'UZTELECOM',
     description: '"O\'zbektelekom" aksiyadorlik kompaniyasi',
   },
   {
-    logoUrl: 'https://edu-champ-seven.vercel.app/images/hamkor1.jpg',
+    logoUrl: PRODUCT_INFO.hamkor2,
     title: 'RTM',
     description: 'RADIOALOQA, RADIOEShITITIRISH VA TELEVIDENIYE MARKAZI',
   },
   {
-    logoUrl: 'https://edu-champ-seven.vercel.app/images/owa-black.svg',
+    logoUrl: PRODUCT_INFO.hamkor3,
     title: 'WEB ACADEMY',
     description: 'Open web akademiyasi',
   },

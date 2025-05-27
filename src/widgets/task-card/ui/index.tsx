@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface TaskCardProps {
@@ -17,10 +18,12 @@ const TaskCard: React.FC<TaskCardProps> = ({
 }) => {
   return (
     <div className="bg-white border-t py-4 flex flex-col sm:flex-row items-start gap-4 w-full">
-      <img
+      <Image
         src={imageUrl}
         alt="task"
         className="w-35 h-35 max-sm:w-full object-cover rounded-sm border"
+        width={500}
+        height={500}
       />
       <div className="flex-1 flex flex-col items-start h-full justify-between gap-2">
         <div className="flex justify-between items-center max-sm:w-full">

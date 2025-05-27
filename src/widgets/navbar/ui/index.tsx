@@ -2,6 +2,7 @@
 import { PRODUCT_INFO } from '@/shared/constants/data';
 import useSidebarStore from '@/shared/store/sidebarSore';
 import { Bell, LayoutDashboard, Menu, Search, User, X } from 'lucide-react';
+import Image from 'next/image';
 import React from 'react';
 
 const Navbar = () => {
@@ -33,15 +34,19 @@ const Navbar = () => {
           </button>
 
           <div className="px-[10px]">
-            <img
-              className="max-h-[42px] block md:hidden"
+            <Image
+              className="max-h-[42px] w-[] block md:hidden"
               src={PRODUCT_INFO.logoMobile}
               alt={PRODUCT_INFO.name}
+              width={42}
+              height={50}
             />
-            <img
+            <Image
               className="max-h-[42px] hidden md:block"
               src={PRODUCT_INFO.logoWhite}
               alt={PRODUCT_INFO.name}
+              width={150}
+              height={50}
             />
           </div>
           <ul

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface PartnerCardProps {
@@ -13,10 +14,12 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
 }) => {
   return (
     <div className="flex flex-col items-center text-center lg:border-t flex-1 sm:w-64 py-[10px]">
-      <img
+      <Image
         src={logoUrl}
         alt="logo"
-        className="w-30 h-24 object-contain border p-[5px] rounded-xs"
+        className="object-contain max-h-[100px] min-h-[100px] max-w-[120px] border p-[5px] rounded-xs"
+        width={150}
+        height={100}
       />
       <h4 className="text-md font-semibold text-gray-800">{title}</h4>
       <p className="text-xs text-gray-600 mt-2">{description}</p>

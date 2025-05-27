@@ -5,7 +5,7 @@ type StatCardProps = {
   title: string;
   subtitle: string;
   value: number;
-  progress: number; // foiz
+  progress: number;
   progressLabel: string;
   gradientFrom: string;
   gradientTo: string;
