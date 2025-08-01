@@ -1,5 +1,3 @@
-import { PRODUCT_INFO } from '@/shared/constants/data';
-
 export const tasks = [
   {
     title: 'Ma’ruza mashg‘ulotlari',
@@ -7,7 +5,7 @@ export const tasks = [
     description:
       'Diskret tuzilmalar fanining ma’ruza mashg‘ulotlari uchun ajratilgan soatlar 30 soatni tashkil qiladi. Fanning nazariy mashg‘ulotlari beriladi.',
     hours: 30,
-    imageUrl: PRODUCT_INFO.taskCard,
+    imageUrl: '/1.jpg',
   },
   {
     title: 'Amaliy mashg‘ulotlar',
@@ -15,7 +13,7 @@ export const tasks = [
     description:
       'Diskret tuzilmalar fanining ma’ruza mashg‘ulotlari uchun ajratilgan soatlar 18 soatni tashkil qiladi. Fanning amaliy mashg‘ulotlari beriladi.',
     hours: 18,
-    imageUrl: PRODUCT_INFO.taskCard,
+    imageUrl: '/2.jpg',
   },
   {
     title: 'Mustaqil ish',
@@ -23,6 +21,6 @@ export const tasks = [
     description:
       'Diskret tuzilmalar fanining ma’ruza mashg‘ulotlari uchun ajratilgan soatlar 72 soatni tashkil qiladi. Fanning mustaqil ishlari beriladi.',
     hours: 72,
-    imageUrl: PRODUCT_INFO.taskCard,
+    imageUrl: '/3.jpg',
   },
 ];

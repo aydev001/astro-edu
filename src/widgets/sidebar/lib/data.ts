@@ -13,158 +13,71 @@ export const sidebarMenuData: SidebarMenuItem[] = [
   },
   {
     label: 'Fan meyyoriy hujjatlari',
-    icon: 'BookUser',
+    icon: 'NotebookPen',
     children: [
-      { label: 'Kredit tizimi', link: '/' },
-      { label: 'Fan dasturi', link: '/' },
-      { label: "Ishchi o'quv dasturi", link: '/' },
-      { label: 'Kalendar reja', link: '/' },
-      { label: 'Adabiyotlar', link: '/' },
-      { label: 'Glossariy', link: '/' },
-      { label: 'Pedagogik texnologiyalar', link: '/' },
+      { label: 'Fan dasturi', link: '/fan-hujjatlar/fan-dasturi' },
+      { label: 'Fan sillabusi', link: '/fan-hujjatlar/fan-sillabusi' },
+      { label: 'Glossariy', link: '/fan-hujjatlar/glossary' },
     ],
   },
   {
     label: "Fan ma'lumotlari",
-    icon: 'CalendarCheck',
+    icon: 'BookMarked',
     children: [
-      { label: "Ma'ruzalar", link: '/' },
-      {
-        label: "Amaliy mashg'ulotlar",
-        children: [
-          { label: "Ma'lumotlar", link: '/' },
-          { label: 'Topshiriqlar', link: '/' },
-        ],
-      },
-      {
-        label: 'Mustaqil ish',
-        children: [
-          { label: "Ma'lumotlar", link: '/' },
-          { label: 'Topshiriqlar', link: '/' },
-        ],
-      },
+      { label: "Ma'ruzalar", link: '/fan-malumotlari/maruza' },
+      { label: "Amaliy mashg'ulotlar", link: '/fan-malumotlari/amaliy' },
+      { label: 'Labaratorya', link: '/fan-malumotlari/labaratorya' },
+      { label: 'Mustaqil ish', link: '/fan-malumotlari/mustaqil' },
     ],
+  },
+  {
+    label: 'Darsliklar va adabiyotlar',
+    icon: 'BookOpenText',
+    link: '/darslik-adabiyot',
   },
   {
     label: 'Video darslar',
     icon: 'Clapperboard',
-    link: '/',
+    link: '/videodarslar',
   },
   {
-    label: 'Integratsion yondoshuv',
-    icon: 'FileVolume',
-    link: '/',
+    label: 'Fotogalereya va animatsiyalar',
+    icon: 'ImageDown',
+    link: '/fotogalereya',
   },
   {
-    label: 'Nazoratlar',
-    icon: 'FileChartPie',
-    link: '/',
+    label: 'Osmon xaritasi',
+    icon: 'Telescope',
+    link: '/osmon-xaritasi',
   },
   {
-    label: 'Natijalar',
-    icon: 'ChartColumnBig',
-    link: '/',
+    label: "Astronomik o'quv ilovalari",
+    icon: 'Layers',
+    link: '/astronomik-ilovalar',
   },
   {
-    label: 'Baholash mezonlari',
-    icon: 'ChartNoAxesCombined',
-    link: '/',
+    label: 'Virtual labaratoryalar',
+    icon: 'Microscope',
+    link: '/virtual-labaratorya',
   },
   {
-    label: "Innovatsion ta'lim sxemasi",
-    icon: 'TvMinimalPlay',
-    link: '/',
+    label: 'Ilimiy tadqiqot ilovalari',
+    icon: 'Album',
+    link: '/ilimiy-ilovalar',
   },
   {
-    label: "Bog'lanish",
-    icon: 'Mail',
-    link: '/',
+    label: 'Onlayn kuzatuvlar',
+    icon: 'Cctv',
+    link: '/onlayn-kuzatuvlar',
   },
   {
-    label: 'Mobil ilova',
-    icon: 'Smartphone',
-    link: '/',
+    label: 'Testlar',
+    icon: 'NotebookText',
+    link: '/testlar',
+  },
+  {
+    label: 'Metodik yordam',
+    icon: 'PencilRuler',
+    link: '/metodik-yordam',
   },
 ];
-
-// export const sidebarMenuData: SidebarMenuItem[] = [
-//   {
-//     label: "Bosh sahifa",
-//     icon: "House",
-//     link: "/bosh-sahifa"
-//   },
-//   {
-//     label: "Fan meyyoriy hujjatlari",
-//     icon: "BookUser",
-//     children: [
-//       { label: "Kredit tizimi", link: "/kredit-tizimi" },
-//       { label: "Fan dasturi", link: "/fan-dasturi" },
-//       { label: "Ishchi o'quv dasturi", link: "/ishchi-oquv-dasturi" },
-//       { label: "Kalendar reja", link: "/kalendar-reja" },
-//       { label: "Adabiyotlar", link: "/adabiyotlar" },
-//       { label: "Glossariy", link: "/glossariy" },
-//       { label: "Pedagogik texnologiyalar", link: "/pedagogik-texnologiyalar" }
-//     ]
-//   },
-//   {
-//     label: "Fan ma'lumotlari",
-//     icon: "CalendarCheck",
-//     children: [
-//       { label: "Ma'ruzalar", link: "/maruzalar" },
-//       {
-//         label: "Amaliy mashg'ulotlar",
-//         children: [
-//           { label: "Ma'lumotlar", link: "/amaliy-mashgulotlar/malumotlar" },
-//           { label: "Topshiriqlar", link: "/amaliy-mashgulotlar/topshiriqlar" }
-//         ]
-//       },
-//       {
-//         label: "Mustaqil ish",
-//         children: [
-//           { label: "Ma'lumotlar", link: "/mustaqil-ish/malumotlar" },
-//           { label: "Topshiriqlar", link: "/mustaqil-ish/topshiriqlar" }
-//         ]
-//       }
-//     ]
-//   },
-//   {
-//     label: "Video darslar",
-//     icon: "Clapperboard",
-//     link: "/video-darslar"
-//   },
-//   {
-//     label: "Integratsion yondoshuv",
-//     icon: "FileVolume",
-//     link: "/integratsion-yondoshuv"
-//   },
-//   {
-//     label: "Nazoratlar",
-//     icon: "FileChartPie",
-//     link: "/nazoratlar"
-//   },
-//   {
-//     label: "Natijalar",
-//     icon: "ChartColumnBig",
-//     link: "/natijalar"
-//   },
-//   {
-//     label: "Baholash mezonlari",
-//     icon: "ChartNoAxesCombined",
-//     link: "/baholash-mezonlari"
-//   },
-//   {
-//     label: "Innovatsion ta'lim sxemasi",
-//     icon: "TvMinimalPlay",
-//     link: "/innovatsion-talim-sxemasi"
-//   },
-//   {
-//     label: "Bog'lanish",
-//     icon: "Mail",
-//     link: "/boglanish"
-//   },
-//   {
-//     label: "Mobil ilova",
-//     icon: "Smartphone",
-//     link: "/mobil-ilova"
-//   }
-// ];

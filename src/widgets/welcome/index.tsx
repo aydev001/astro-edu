@@ -1,5 +1,4 @@
-import { partners } from '@/widgets/partner-card/lib/data';
-import PartnerCard from '@/widgets/partner-card/ui';
+'use client';
 import { statCardData } from '@/widgets/stat-card/lib/data';
 import StatCard from '@/widgets/stat-card/ui';
 import { tasks } from '@/widgets/task-card/lib/data';
@@ -14,21 +13,12 @@ const Welcome = () => {
           <StatCard key={idx} {...data} />
         ))}
       </div>
-      <div className="flex max-lg:flex-col py-[15px] gap-[10px]">
+      <div className="py-[15px]">
         <section className="p-[15px] pb-0 border rounded-md shadow-sm">
           <h2 className="text-xl font-semibold mb-2">Fan topshiriqlari</h2>
           <div className="grid grid-cols-1">
             {tasks.map((task, index) => (
               <TaskCard key={index} {...task} />
-            ))}
-          </div>
-        </section>
-
-        <section className="p-[15px] pb-0 border rounded-md shadow-sm flex-1">
-          <h2 className="text-xl font-semibold mb-2">Hamkor tashkilotlar</h2>
-          <div className="flex lg:flex-col justify-center lg:items-center">
-            {partners.map((partner, index) => (
-              <PartnerCard key={index} {...partner} />
             ))}
           </div>
         </section>

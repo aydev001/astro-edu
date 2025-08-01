@@ -1,7 +1,8 @@
 'use client';
 import { PRODUCT_INFO } from '@/shared/constants/data';
+import { cn } from '@/shared/lib/utils';
 import useSidebarStore from '@/shared/store/sidebarSore';
-import { Bell, LayoutDashboard, Menu, Search, User, X } from 'lucide-react';
+import { Bell, Menu, Search, User, X } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -16,19 +17,21 @@ const Navbar = () => {
             className="text-white hover:bg-white/15 w-[60px] h-[60px] bg-white/10 flex justify-center items-center cursor-pointer active:bg-white/20 duration-100 relative"
           >
             <Menu
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  duration-300 ease-in-out transform ${
+              className={cn(
                 isOpen
                   ? 'opacity-100 scale-100'
-                  : 'opacity-0 scale-0 pointer-events-none'
-              }`}
+                  : 'opacity-0 scale-0 pointer-events-none',
+                'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  duration-300 ease-in-out transform',
+              )}
               size={24}
             />
             <X
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  duration-300 ease-in-out transform ${
+              className={cn(
                 isOpen
                   ? 'opacity-0 scale-0 pointer-events-none'
-                  : 'opacity-100 scale-100'
-              }`}
+                  : 'opacity-100 scale-100',
+                'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  duration-300 ease-in-out transform',
+              )}
               size={24}
             />
           </button>
@@ -49,12 +52,6 @@ const Navbar = () => {
               height={50}
             />
           </div>
-          <ul
-            className={`flex justify-start max-md:hidden items-center gap-[15px] font-[800] text-[14px] uppercase text-white`}
-          >
-            <li className="cursor-pointer">HOME</li>
-            <li className="cursor-pointer">Quick menu</li>
-          </ul>
         </div>
         <div className="flex justify-end items-center">
           <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
@@ -65,9 +62,6 @@ const Navbar = () => {
           </button>
           <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
             <User size={'20px'} />
-          </button>
-          <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
-            <LayoutDashboard size={'20px'} className="fill-amber-50" />
           </button>
         </div>
       </div>
