@@ -8,11 +8,11 @@ type Props = {
 
 const VideoLessonGrid: React.FC<Props> = ({ lessons }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] xl:grid-cols-[repeat(auto-fill,minmax(400px,1fr))]  gap-4">
       {lessons.map((lesson) => (
         <div
           key={lesson.id}
-          className="border rounded-xl shadow hover:shadow-md transition duration-200"
+          className="border rounded-lg shadow hover:shadow-md transition duration-200"
         >
           <div className="aspect-video w-full">
             <iframe

@@ -22,7 +22,7 @@ export const videoLessons: VideoLesson[] = [
   },
   {
     id: 4,
-    title: '4-dars: Teleskoplar va kuzatuv usullari',
+    title: '4-dars: Quyosh tizimidagi sayyoralar',
     youtubeUrl: 'https://www.youtube.com/embed/zkCKx3fpk4Q',
   },
 ];

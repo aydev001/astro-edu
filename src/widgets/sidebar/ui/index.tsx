@@ -29,11 +29,11 @@ const Sidebar = () => {
     >
       <div className="px-[15px] py-[10px] flex justify-between items-center gap-1 border-b">
         <Image
-          className="max-h-[32px]"
+          className="h-[40px] w-[150px] object-contain"
           src={PRODUCT_INFO.logoAside}
           alt={PRODUCT_INFO.name}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
         />
         <button
           onClick={closeSidebar}

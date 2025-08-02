@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 interface TaskCardProps {
@@ -7,6 +8,7 @@ interface TaskCardProps {
   description: string;
   hours: number;
   imageUrl: string;
+  link: string;
 }
 
 const TaskCard: React.FC<TaskCardProps> = ({
@@ -15,7 +17,14 @@ const TaskCard: React.FC<TaskCardProps> = ({
   description,
   hours,
   imageUrl,
+  link,
 }) => {
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push(link);
+  };
+
   return (
     <div className="bg-white border-t py-4 flex flex-col sm:flex-row items-start gap-4 w-full">
       <Image
@@ -36,7 +45,10 @@ const TaskCard: React.FC<TaskCardProps> = ({
           {subtitle}
         </p>
         <p className="text-xs text-gray-700">{description}</p>
-        <button className="text-[14px] px-[15px] active:bg-yellow-500 py-[3px] rounded-full border border-yellow-400 bg-yellow-400 hover:bg-yellow-300 duration-500 cursor-pointer">
+        <button
+          onClick={handleNavigate}
+          className="text-[14px] px-[15px] active:bg-yellow-500 py-[3px] rounded-full border border-yellow-400 bg-yellow-400 hover:bg-yellow-300 duration-500 cursor-pointer"
+        >
           Batafsil
         </button>
       </div>
