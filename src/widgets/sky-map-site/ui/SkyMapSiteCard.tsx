@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SkyMapSite } from '../lib/data';
+import Image from 'next/image';
 
 interface Props {
   site: SkyMapSite;
@@ -9,7 +10,9 @@ export default function SkyMapSiteCard({ site }: Props) {
   return (
     <div className="flex max-sm:flex-col gap-2 border rounded-sm overflow-hidden p-2 shadow-sm bg-white">
       <div className="w-64 h-auto max-sm:w-full">
-        <img
+        <Image
+          width={300}
+          height={300}
           src={site.image}
           alt={site.title}
           className="w-full h-full object-cover rounded-sm"

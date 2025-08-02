@@ -4,6 +4,7 @@ import { Button } from '@/shared/ui/button';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui/carousel';
 import { FaAndroid, FaApple } from 'react-icons/fa';
 import { SkyMapApp } from '../lib/data';
+import Image from 'next/image';
 
 type Props = {
   app: SkyMapApp;
@@ -16,7 +17,9 @@ const SkyAppCard: React.FC<Props> = ({ app }) => {
         <CarouselContent>
           {app.images.map((img, i) => (
             <CarouselItem key={i}>
-              <img
+              <Image
+                width={300}
+                height={300}
                 src={img}
                 alt={`${app.title} image ${i + 1}`}
                 className="rounded-md w-full h-70 object-cover"
