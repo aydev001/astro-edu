@@ -30,8 +30,12 @@ const SkyAppCard: React.FC<Props> = ({ app }) => {
       </Carousel>
 
       <div>
-        <h2 className="text-lg font-semibold mt-2">{app.title}</h2>
-        <p className="text-sm text-gray-600">{app.description}</p>
+        <h2 data-access-size className="text-lg font-semibold mt-2">
+          {app.title}
+        </h2>
+        <p data-access-size className="text-sm text-gray-600">
+          {app.description}
+        </p>
       </div>
 
       <div className="flex gap-2 mt-auto">

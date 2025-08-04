@@ -15,7 +15,9 @@ const Welcome = () => {
       </div>
       <div className="py-[15px]">
         <section className="p-[15px] pb-0 border rounded-md shadow-sm">
-          <h2 className="text-xl font-semibold mb-2">Fan topshiriqlari</h2>
+          <h2 data-access-size className="text-xl font-semibold mb-2">
+            Fan topshiriqlari
+          </h2>
           <div className="grid grid-cols-1">
             {tasks.map((task, index) => (
               <TaskCard key={index} {...task} />

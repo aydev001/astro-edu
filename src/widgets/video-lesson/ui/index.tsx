@@ -23,7 +23,10 @@ const VideoLessonGrid: React.FC<Props> = ({ lessons }) => {
               allowFullScreen
             />
           </div>
-          <div className="p-4 text-base font-medium text-gray-800">
+          <div
+            data-access-size
+            className="p-4 text-base font-medium text-gray-800"
+          >
             {lesson.title}
           </div>
         </div>

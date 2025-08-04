@@ -12,25 +12,43 @@ const GalleryTable: React.FC<Props> = ({ data }) => {
       <table className="w-full border-collapse border text-sm md:text-base">
         <thead>
           <tr className="bg-gray-100">
-            <th className="border px-2 py-2 font-medium w-12">№</th>
-            <th className="border px-4 py-2 font-medium text-left">
+            <th data-access-size className="border px-2 py-2 font-medium w-12">
+              №
+            </th>
+            <th
+              data-access-size
+              className="border px-4 py-2 font-medium text-left"
+            >
               Manba nomi
             </th>
-            <th className="border px-4 py-2 font-medium text-left">Izoh</th>
+            <th
+              data-access-size
+              className="border px-4 py-2 font-medium text-left"
+            >
+              Izoh
+            </th>
           </tr>
         </thead>
         <tbody>
           {data.map((item, index) => (
             <tr
+              data-access-size
               key={item.id}
               className={`${index % 2 === 1 ? 'bg-gray-50' : ''} cursor-pointer hover:bg-gray-200`}
               onClick={() => window.open(item.url, '_blank')}
             >
-              <td className="border px-2 py-2 text-center">{index + 1}</td>
-              <td className="border px-4 py-2 text-indigo-700 font-medium underline">
+              <td data-access-size className="border px-2 py-2 text-center">
+                {index + 1}
+              </td>
+              <td
+                data-access-size
+                className="border px-4 py-2 text-indigo-700 underline"
+              >
                 {item.title}
               </td>
-              <td className="border px-4 py-2">{item.description}</td>
+              <td data-access-size className="border px-4 py-2">
+                {item.description}
+              </td>
             </tr>
           ))}
         </tbody>

@@ -28,12 +28,16 @@ const StatCard: React.FC<StatCardProps> = ({
       }}
     >
       <div className="flex justify-between items-start mb-2">
-        <div className="font-semibold text-md">{title}</div>
-        <div className="text-xl font-semibold">
+        <div data-access-size className="font-semibold text-md">
+          {title}
+        </div>
+        <div data-access-size className="text-xl font-semibold">
           <CountUpMotion to={value} />
         </div>
       </div>
-      <div className="text-xs text-white/80 mb-3">{subtitle}</div>
+      <div data-access-size className="text-xs text-white/80 mb-3">
+        {subtitle}
+      </div>
 
       <div className="w-full h-1 rounded-full bg-white/30 relative overflow-hidden">
         <div

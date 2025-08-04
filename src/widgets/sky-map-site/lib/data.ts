@@ -63,3 +63,22 @@ export const onlineView: SkyMapSite[] = [
     url: 'https://www.slooh.com',
   },
 ];
+
+export const virtualLabs: SkyMapSite[] = [
+  {
+    id: 1,
+    title: 'CLEA Astronomy Labs',
+    description:
+      'CLEA — talabalar va o‘qituvchilar uchun interaktiv astronomiya laboratoriyalari bo‘lib, virtual muhitda yulduzlar, sayyoralar, galaktikalar ustida amaliy tajribalar o‘tkazish imkonini beradi. Talabalar yoritish intensivligini o‘lchash, spektrlarni tahlil qilish, galaktikalar harakatini kuzatish va teleskoplar yordamida hodisalarni simulyatsiya qilishlari mumkin.',
+    image: '/sky-map/clea-1.jpg',
+    url: 'http://public.gettysburg.edu/~marschal/clea/CLEAhome.html',
+  },
+  {
+    id: 2,
+    title: 'PhET Astronomy Simulations',
+    description:
+      'PhET — Kolorado universiteti tomonidan yaratilgan onlayn platforma bo‘lib, unda sayyoralar harakati, Kepler qonunlari, yulduzlarning spektri va orbitalar haqidagi interaktiv astronomik simulyatsiyalar mavjud. Talabalar vizual interfeys orqali amaliy tarzda o‘rganishlari, real vaqt rejimida hodisalarni simulyatsiya qilishlari mumkin.',
+    image: '/sky-map/phet-1.jpg',
+    url: 'https://phet.colorado.edu/sims/html/my-solar-system/latest/my-solar-system_all.html',
+  },
+];

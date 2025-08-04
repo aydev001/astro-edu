@@ -25,7 +25,7 @@ const SidebarBtn = ({ item }: { item: SidebarMenuItem }) => {
   }
 
   return (
-    <div className="flex flex-col gap-1">
+    <div data-access-size className="flex flex-col gap-1">
       {item.link ? (
         <Link
           href={item.link}

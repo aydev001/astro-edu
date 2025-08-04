@@ -15,13 +15,17 @@ export default function SkyMapSiteCard({ site }: Props) {
           height={300}
           src={site.image}
           alt={site.title}
-          className="w-full h-full object-cover rounded-sm"
+          className="w-full h-full object-cover rounded-sm border"
         />
       </div>
       <div className="p-4 flex flex-col justify-between w-full">
         <div>
-          <h2 className="text-[20px] font-medium mb-2">{site.title}</h2>
-          <p className="text-gray-700 text-[14px]">{site.description}</p>
+          <h2 data-access-size className="text-[20px] font-medium mb-2">
+            {site.title}
+          </h2>
+          <p data-access-size className="text-gray-700 text-[14px]">
+            {site.description}
+          </p>
         </div>
         <div className="mt-4">
           <Link href={site.url} target="_blank">

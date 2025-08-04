@@ -1,13 +1,17 @@
 'use client';
+
 import { PRODUCT_INFO } from '@/shared/constants/data';
 import { cn } from '@/shared/lib/utils';
 import useSidebarStore from '@/shared/store/sidebarSore';
-import { Bell, Menu, Search, User, X } from 'lucide-react';
+import { Bell, Menu, Search, X, Eye } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+import { Popover, PopoverTrigger, PopoverContent } from '@/shared/ui/popover';
+import AccessibilityControls from '@/widgets/accessibility/ui';
 
 const Navbar = () => {
   const { isOpen, toggleSidebar } = useSidebarStore();
+
   return (
     <header className="fixed z-[99] w-full h-[60px] font-normal left-0 top-0 bg-[linear-gradient(45deg,#4d77ff_0%,#0186f2_100%)]">
       <div className="flex justify-between items-center gap-[10px]">
@@ -53,15 +57,21 @@ const Navbar = () => {
             />
           </div>
         </div>
+
         <div className="flex justify-end items-center">
+          <Popover>
+            <PopoverTrigger className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
+              <Eye size={20} />
+            </PopoverTrigger>
+            <PopoverContent className="bg-white text-black rounded-md shadow-xl p-2 mr-1 w-max">
+              <AccessibilityControls />
+            </PopoverContent>
+          </Popover>
           <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
-            <Search size={'20px'} />
+            <Search size={20} />
           </button>
           <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
-            <Bell size={'20px'} className="fill-amber-50" />
-          </button>
-          <button className="h-[60px] border-l-[1px] border-white/20 hover:bg-white/20 text-white w-[50px] active:bg-white/10 duration-200 flex justify-center items-center cursor-pointer">
-            <User size={'20px'} />
+            <Bell size={20} className="fill-amber-50" />
           </button>
         </div>
       </div>

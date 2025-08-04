@@ -32,8 +32,8 @@ const Sidebar = () => {
           className="h-[40px] w-[150px] object-contain"
           src={PRODUCT_INFO.logoAside}
           alt={PRODUCT_INFO.name}
-          width={200}
-          height={200}
+          width={500}
+          height={500}
         />
         <button
           onClick={closeSidebar}

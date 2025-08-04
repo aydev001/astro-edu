@@ -6,7 +6,7 @@ import { LectureFile } from '../lib/data';
 type Props = {
   data: LectureFile[];
   basePath: string;
-  type?: 'table' | 'single'; // new
+  type?: 'table' | 'single';
 };
 
 const LectureDetail: React.FC<Props> = ({ data, basePath, type = 'table' }) => {
