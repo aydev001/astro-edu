@@ -21,12 +21,12 @@ export const sidebarMenuData: SidebarMenuItem[] = [
     ],
   },
   {
-    label: "Fan ma'lumotlari",
+    label: 'Fan maʼlumotlari',
     icon: 'BookMarked',
     children: [
-      { label: "Ma'ruzalar", link: '/fan-malumotlari/maruza' },
-      { label: "Amaliy mashg'ulotlar", link: '/fan-malumotlari/amaliy' },
-      { label: 'Labaratorya', link: '/fan-malumotlari/labaratorya' },
+      { label: 'Maʼruzalar', link: '/fan-malumotlari/maruza' },
+      { label: 'Amaliy mashgʻulotlar', link: '/fan-malumotlari/amaliy' },
+      { label: 'Laboratoriya', link: '/fan-malumotlari/labaratorya' },
       { label: 'Mustaqil ish', link: '/fan-malumotlari/mustaqil' },
     ],
   },
@@ -51,17 +51,17 @@ export const sidebarMenuData: SidebarMenuItem[] = [
     link: '/osmon-xaritasi',
   },
   {
-    label: "Astronomik o'quv ilovalari",
+    label: 'Astronomik oʻquv ilovalari',
     icon: 'Layers',
     link: '/astronomik-ilovalar',
   },
   {
-    label: 'Virtual labaratoryalar',
+    label: 'Virtual laboratoriyalar',
     icon: 'Microscope',
     link: '/virtual-labaratorya',
   },
   {
-    label: 'Ilimiy tadqiqot ilovalari',
+    label: 'Ilmiy tadqiqot ilovalari',
     icon: 'Album',
     link: '/ilimiy-ilovalar',
   },
