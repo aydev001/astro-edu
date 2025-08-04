@@ -1,7 +1,7 @@
 export const statCardData = [
   {
     title: 'Jami soatlar',
-    subtitle: 'Fan 4 kredit',
+    subtitle: 'Fan 8 kredit',
     value: 82,
     progress: 78,
     progressLabel: "O'tilgan soatlar foizi",
@@ -10,7 +10,7 @@ export const statCardData = [
   },
   {
     title: "Ma'ruzalar",
-    subtitle: 'Fan 6 kredit',
+    subtitle: 'Fan 8 kredit',
     value: 11,
     progress: 88,
     progressLabel: "O'tilgan soatlar foizi",
@@ -19,7 +19,7 @@ export const statCardData = [
   },
   {
     title: 'Amaliyotlar',
-    subtitle: 'Fan 6 kredit',
+    subtitle: 'Fan 8 kredit',
     value: 5,
     progress: 65,
     progressLabel: "O'tilgan soatlar foizi",
@@ -28,7 +28,7 @@ export const statCardData = [
   },
   {
     title: 'Mustaqil ish',
-    subtitle: 'Fan 6 kredit',
+    subtitle: 'Fan 8 kredit',
     value: 30,
     progress: 90,
     progressLabel: 'Bajarilgan topshiriqlar',
